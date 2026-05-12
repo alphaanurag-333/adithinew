@@ -1,0 +1,148 @@
+.signup-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f7f7f7;
+}
+
+.signup-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.signup-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+}
+
+.signup-left .signup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signup-right {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-card {
+  width: 100%;
+}
+
+.signup-header h6 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.signup-header p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.signup-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form .form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.signup-form .form-group input,
+.signup-form .form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.signup-form .vehicle-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.signup-form .vehicle-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.signup-form .form-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.signup-form .form-btn {
+  margin-top: 10px;
+}
+
+.signup-form .form-btn button {
+  width: 100%;
+  padding: 12px;
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.form-login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.required {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+  .signup-left {
+    display: none;
+  }
+  .signup-right {
+    padding: 30px 20px;
+  }
+}
+
+.signup-container {
+  display: flex;
+  max-width: 500px; /* adjust for form width */
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: auto; /* center horizontally */
+}
+.signup-right {
+  flex: 1;
+  padding: 40px 30px;
+}

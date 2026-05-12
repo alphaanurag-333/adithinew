@@ -1,0 +1,395 @@
+/* Trivozo-inspired home sections (visual only) */
+:root {
+  --home-text-unified: var(--primary);
+}
+
+.homeStats {
+  /* background: #f6f8fb; */
+  border-top: 1px solid #e8edf3;
+  border-bottom: 1px solid #e8edf3;
+  padding: 2.2rem 0;
+}
+
+
+.homeStatCard {
+  transition: all 0.9s ease;
+}
+
+.homeStatCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.homeStatCard {
+  height: 100%;
+  padding: 0 0 1.2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d7e2ec;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.homeStatCard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 98px;
+  background: var(--gradient);
+  z-index: 0;
+}
+
+.homeStatCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.16);
+}
+
+.homeStatCard h3 {
+  margin: 0;
+  width: 110px;
+  height: 110px;
+  margin: 22px auto 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #1f2a37;
+  letter-spacing: -0.03em;
+  background: #ffffff;
+  border: 4px solid var(--secondary);
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.14);
+  position: relative;
+  z-index: 2;
+}
+
+.homeStatCard p {
+  margin: 1.15rem auto 0;
+  width: calc(100% - 20px);
+  padding: 0.62rem 0.75rem;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: #ffffff;
+  border: 1.5px solid var(--primary);
+  border-radius: 999px;
+}
+
+@media (max-width: 767.98px) {
+  .homeStats {
+    padding: 1.4rem 0;
+  }
+
+  .homeStatCard h3 {
+    width: 78px;
+    height: 78px;
+    margin-top: 14px;
+    font-size: 1.45rem;
+    border-width: 3px;
+  }
+
+  .homeStatCard p {
+    width: calc(100% - 16px);
+    padding: 0.58rem 0.5rem;
+    font-size: 13.5px;
+  }
+}
+
+.homeUnifiedAccountInner {
+  transition: all 0.3s ease;
+}
+
+.homeAuthBtn {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.homeAuthBtn:hover {
+  transform: translateY(-3px);
+}
+
+.homeUnifiedAccount {
+  padding: 3rem 0;
+  /* background: #ffffff; */
+  border-top: 1px solid #e8edf3;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.homeUnifiedAccountInner {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  /* background: #f8fbff; */
+  border: 1px solid #dde7f1;
+  border-radius: 18px;
+  padding: 2.15rem 1.5rem;
+}
+
+.homeUnifiedAccountInner h2 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.homeUnifiedAccountInner p {
+  margin: 0;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.homeUnifiedAccountActions {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.homeAuthBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, border-color 0.2s ease;
+}
+
+.homeAuthBtn--primary {
+  color: #fff !important;
+  background: var(--gradient);
+  border: 1px solid transparent;
+  box-shadow: 0 8px 18px rgba(23, 59, 95, 0.24);
+}
+
+.homeAuthBtn--primary:hover {
+  color: #fff !important;
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+.homeAuthBtn--secondary {
+  color: #173b5f !important;
+  background: #fff;
+  border: 1px solid #cad8e6;
+}
+
+.homeAuthBtn--secondary:hover {
+  color: var(--primary) !important;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.homeServiceBlocks {
+  /* background: #ffffff; */
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.travelSimplifiedTag {
+  margin: 0 0 0.55rem;
+  color: var(--label-fontcolor);
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.homeServiceTitle {
+  color: #0f172a;
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.45rem;
+}
+
+.homeServiceSubtitle {
+  color: #4b647c;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+/* Unified home-page text style across major sections */
+.homeUnifiedAccountInner h2,
+.homeServiceTitle,
+.user-site-root .home-intro .headContant h2 {
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.028em;
+  color: var(--home-text-unified);
+  margin-bottom: 0.7rem;
+}
+
+.homeUnifiedAccountInner p,
+.homeServiceSubtitle,
+.user-site-root .home-intro .headContant p {
+  font-size: 1.04rem;
+  font-weight: 500;
+  line-height: 1.62;
+  color: #5b6f85;
+}
+
+/* Keep Atithi heading color consistent (remove gradient text mismatch) */
+.user-site-root .home-intro .headContant h2 span {
+  background: none !important;
+  color: var(--home-text-unified) !important;
+}
+
+.homeServiceCard {
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e2eaf3;
+  border-radius: 16px;
+  padding: 1.45rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.homeServiceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+  opacity: 0.8;
+}
+
+.homeServiceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+  border-color: #c7d9ea;
+  background: #ffffff;
+}
+
+.homeServiceIcon {
+  margin-right: 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  font-size: 30px;
+  color: var(--primary);
+  background: #e8f2fb;
+  border: 1px solid #d2e3f3;
+}
+
+.homeServiceCard--stay .homeServiceIcon {
+  background: #e8f2fb;
+  border-color: #cfe0f1;
+}
+
+.homeServiceCard--food .homeServiceIcon {
+  background: #e8f2fb;
+  border-color: #e8f2fb;
+}
+
+.homeServiceCard--ride .homeServiceIcon {
+  background: #eef5ff;
+  border-color: #d5e4f8;
+}
+
+.homeServiceCard small {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #eff5fb;
+  border: 1px solid #d8e5f2;
+}
+
+.homeServiceCard h4 {
+  margin-bottom: 0.6rem;
+  color: var(--primary);
+  font-size: 1.24rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.homeServiceCard p {
+  margin: 0 0 1.05rem;
+  color: #5f7286;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.homeServiceList {
+  margin: 0 0 1.1rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.homeServiceList li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: #2f4b65;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.homeServiceList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.43rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--label-fontcolor);
+}
+
+.homeServiceLink {
+  color: #173b5f !important;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.homeServiceLink:hover {
+  color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+  .homeServiceBlocks {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .homeServiceCard {
+    border-radius: 14px;
+    padding: 1.2rem 1rem;
+  }
+
+  .homeUnifiedAccountInner {
+    padding: 1.6rem 1rem;
+  }
+}

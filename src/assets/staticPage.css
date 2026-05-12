@@ -1,0 +1,412 @@
+.staticPageContainer {
+  margin-bottom: 85px;
+}
+
+.staticPageContainer h1,
+.staticPageContainer h2,
+.staticPageContainer h3,
+.staticPageContainer h4,
+.staticPageContainer h5,
+.staticPageContainer h6,
+.staticPageContainer strong {
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+}
+.staticPageContainer h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+.staticPageContainer h3 {
+  color: #475156;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 26px;
+  font-weight: 600;
+}
+b {
+  font-weight: bold !important;
+  color: #274977 !important;
+  font-size: 16px;
+}
+.staticPageContainer > p:first-child {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #475156;
+}
+.staticPageContainer p,
+.staticPageContainer li {
+  font-size: 14px;
+  font-weight: 500;
+}
+.staticPageContainer li::marker {
+  color: #191c1f;
+}
+.main-content.py-5.my-4.bg-white ul li {
+  list-style: disc !important;
+  font-size: 15px;
+}
+
+.main-content.py-5.my-4.bg-white li {
+  list-style: disc !important;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.main-content.responsive-breadcrumb h1 {
+  color: #fff !important;
+}
+
+/* table {
+  width: 100%;
+}
+
+table thead th {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  min-width: 200px;
+}
+
+table tbody td {
+  border: 1px solid #cfcfcf;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 14px;
+} */
+
+header#header ul li {
+  list-style: none;
+}
+
+header#header li {
+  list-style: none;
+}
+
+.custompadding li {
+  margin-bottom: 10px;
+}
+
+.custompadding {
+  padding: 0 50px;
+}
+
+.custompadding h1:first-child {
+  text-align: center;
+}
+
+.custompadding h2:first-child {
+  text-align: center;
+}
+
+p strong {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+  .custompadding {
+    padding: 0 10px;
+  }
+
+  table thead th {
+    min-width: unset;
+  }
+}
+
+.customHead {
+  /* background: linear-gradient(357.5deg, rgba(255, 255, 255, 1) 34%, rgba(111, 3, 254, 1) 35%); */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  /* padding: 70px 0; */
+  /* padding: 70px 0 110px; */
+}
+
+.customHead h1 {
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  font-size: 30px;
+  font-weight: 700 !important;
+}
+
+.pathClass a {
+  color: #fff;
+}
+
+.pathClass {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.text-justify.term-and-consition-head {
+  align-items: start;
+}
+.text-justify.term-and-consition-head h3 b {
+  font-size: 20px;
+}
+
+/* —— Structured static pages (About, Privacy, Terms, default HTML) —— */
+.staticPageLayout {
+  max-width: 920px;
+}
+
+.staticPageContainer .staticPageCard {
+  background: #fff;
+  border: 1px solid rgba(25, 28, 31, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 10px 28px rgba(25, 28, 31, 0.06);
+}
+
+@media (min-width: 768px) {
+  .staticPageContainer .staticPageCard {
+    padding: 1.5rem 1.75rem;
+  }
+}
+
+.staticPageEyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.staticPageHeroTitle {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.staticPageContainer .staticPageHeroTitle {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.staticPageHighlight {
+  height: 100%;
+  /* background: linear-gradient(
+    145deg,
+    rgba(111, 3, 254, 0.07),
+    rgba(255, 255, 255, 0)
+  ); */
+  border: 1px solid rgba(25, 28, 31, 0.08);
+  
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+}
+
+.staticPageHighlightImage {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 0.55rem;
+  display: block;
+}
+
+.staticPageHighlightLabel {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.45rem;
+}
+
+.staticPageSectionTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.staticPageContainer .staticPageSectionTitle {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.staticPageFeatureTitle {
+  font-size: 1.56rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.staticPageBody {
+  color: #475156;
+  line-height: 1.65;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.staticPageProse {
+  white-space: pre-line;
+}
+
+.staticStatTile {
+  padding: 0.85rem 0.5rem;
+  border-radius: 12px;
+  background: var(--gradient);
+  border: 1px solid rgba(25, 28, 31, 0.06);
+}
+
+.staticStatValue {
+  font-size: clamp(1.85rem, 3vw, 2.65rem);
+  font-weight: 600;
+  /* color: #191c1f; */
+  color: #fff;
+  line-height: 1.15;
+}
+
+.staticStatLabel {
+  font-size: 0.99rem;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.staticPageTeamName {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin-right: 5px;
+}
+
+.staticPageTeamImage {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(25, 28, 31, 0.1);
+  margin-bottom: 0.55rem;
+  display: block;
+}
+
+.staticPageTeamRole {
+  font-size: 0.88rem;
+  color: var(--gradient);
+  font-weight: 600;
+}
+
+.staticPageMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+}
+
+.staticPageMetaBadge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(111, 3, 254, 0.1);
+  color: #5b21b6;
+}
+
+.staticPageMetaDate {
+  font-size: 0.95rem;
+  color: #475156;
+  font-weight: 600;
+}
+
+.staticPolicyArticle {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.staticPolicyArticle:hover {
+  border-color: rgba(111, 3, 254, 0.2);
+  box-shadow: 0 12px 32px rgba(25, 28, 31, 0.08);
+}
+
+.staticPolicyHeading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+
+.staticPageContainer .staticPolicyHeading {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #191c1f !important;
+}
+
+.staticPolicyIndex {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.35rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  background: var(--gradient);
+  color: #fff;
+  line-height: 1;
+}
+
+.staticPageProseWrap.staticPageCard {
+  padding: 1.5rem 1.75rem;
+}
+
+.staticPageProseWrap h1,
+.staticPageProseWrap h2,
+.staticPageProseWrap h3,
+.staticPageProseWrap h4 {
+  margin-top: 1.35rem;
+  margin-bottom: 0.65rem;
+  font-weight: 800;
+}
+
+.staticPageProseWrap h1:first-child,
+.staticPageProseWrap h2:first-child,
+.staticPageProseWrap h3:first-child {
+  margin-top: 0;
+}
+
+.staticPageProseWrap p {
+  margin-bottom: 0.85rem;
+  color: #475156;
+  line-height: 1.65;
+}
+
+.staticPageProseWrap ul,
+.staticPageProseWrap ol {
+  margin-bottom: 0.85rem;
+  padding-left: 1.35rem;
+  color: #475156;
+}
+
+.staticPageProseWrap li {
+  margin-bottom: 0.35rem;
+}
+
+.staticPageProseWrap a {
+  color: var(--primary, #6f03fe);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

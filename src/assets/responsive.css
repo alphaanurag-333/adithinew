@@ -1,0 +1,320 @@
+@media only screen and (max-width: 1500px) {
+  .chatArea {
+    height: 430px;
+  }
+  .supportChatModal {
+    width: 315px;
+    /* width: 415px; */
+    height: 511px;
+    bottom: 42px;
+    right: 50px;
+    /* right: 122px; */
+  }
+  .supportChatArea,
+  .sellerChatArea {
+    height: 348px;
+  }
+  .supportFloatDiv {
+    bottom: 42px;
+    right: 42px;
+  }
+  .supportUserChatModal {
+    height: 511px;
+    width: 315px;
+    bottom: 42px;
+    right: 50px;
+    /* right: 122px; */
+  }
+  .aiCreateArea {
+    height: 380px;
+  }
+  .historyOrderInfo {
+    padding: 38px 0;
+  }
+  .orderDescriptionDiv {
+    gap: 12px;
+  }
+  .orderDescriptionDiv > img {
+    max-width: 85px;
+  }
+  .historyOrderName,
+  .historyOrderPrice {
+    font-size: 18px;
+  }
+  .historyOrderPrice span,
+  .historyOrderId,
+  .historyOrderSellerInfo,
+  .historyOrderBtn button {
+    font-size: 13px;
+  }
+  .productPageCard {
+    width: calc(33.33% - 15px);
+    /* width: calc(23.33% - 7px); */
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  img.floatImg {
+    left: -3%;
+    bottom: 4.5%;
+  }
+  .wishlistCard {
+    width: calc(33.33% - 20px);
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .heroBanner {
+    height: auto;
+  }
+.padg {
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.manage {
+  display:flex;
+}
+.productpageItem {
+  padding-left: 10px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.mobilewidth {
+  width: 100%;
+}
+  .themeHeader h2 {
+    font-size: 22px;
+  }
+
+  .themeHeader a {
+    font-size: 13px;
+  }
+
+  .categoryCard {
+    width: calc(50% - 10px);
+    padding: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .commonSection {
+    padding: 25px 0;
+  }
+
+  .wishlistCard,
+  .productPageCard {
+        width: calc(100%) !important;
+    /* width: calc(48% - 10px) !important; */
+
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  .wishlistImage > img,
+  .productPageImg > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  .wishlistImage {
+    height: 150px;
+  }
+
+  .addToBtn {
+    width: 100%;
+  }
+
+  .themeBtn {
+    font-size: 11px;
+  }
+
+  .wishListData,
+  .productPageCardData {
+    margin: 0 10px 15px 10px;
+  }
+
+  .wishItemTitle h6,
+  .productPageCardTitle h6 {
+    font-size: 14px;
+  }
+
+  .itemPrice {
+    font-size: 18px;
+  }
+
+  .commonSection .container .headContant h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .commonSection .container .headContant p {
+    font-size: 14px;
+  }
+
+  .brandImg {
+    width: 45%;
+    padding: 20px;
+  }
+
+  .homeCustomBg {
+    background-image: unset;
+  }
+
+  header {
+    display: none;
+  }
+
+  div.bottomHeader {
+    display: none;
+  }
+
+  header.mobileNavbar {
+    display: block;
+  }
+
+  .mobileBottomBar.bottomHeader {
+    display: block;
+  }
+
+  .navberContainer a.aiBtn {
+    font-size: 12px;
+  }
+
+  .offcanvas.offcanvas-end {
+    width: 75%;
+  }
+
+  .commonSection .container .row .col-lg-6 img {
+    width: 100%;
+  }
+
+  .commonSection .container .row .col-lg-6 img {
+    width: auto !important;
+  }
+  .planspricing {
+    transform: none !important;
+  }
+  .headContant {
+    margin-bottom: 30px;
+  }
+
+  .row {
+    margin-right: calc(-0.5 * var(--cui-gutter-x));
+    margin-left: calc(-0.5 * var(--cui-gutter-x));
+  }
+
+  .mainLogo {
+    max-width: 120px;
+    height: 38px;
+    max-height: 38px;
+  }
+
+  .header-wordmark {
+    font-size: 1rem;
+  }
+
+  .prdouctPageHeader {
+    flex-direction: column;
+  }
+
+  .productSearchBar {
+    width: 100%;
+  }
+
+  .productSelect {
+    min-width: 100%;
+  }
+
+  .prdouctSelectDiv::after {
+    top: 65%;
+  }
+
+  .prdouctSelectDiv {
+    margin-top: 10px;
+  }
+
+  .productPageImg {
+    height: 150px;
+    /* padding: 20px; */
+  }
+
+  section.commonSection .col-md-7 img {
+    width: 100%;
+  }
+
+  .mobileHide {
+    /* display: none; */
+    height: auto !important;
+  }
+
+  .categoryCard h6 {
+    font-size: 16px;
+  }
+
+  .sellersPosterDiv {
+    height: 140px;
+  }
+
+  .sellersProfileImgDiv {
+    width: 100px;
+    position: unset;
+    height: 100px;
+  }
+
+  .sellersProfileImgDiv img {
+    width: 60%;
+  }
+
+  .sellersDetails {
+    flex-direction: column;
+  }
+
+  .sellersinfo {
+    width: 100%;
+  }
+
+  .sellersInfoDiv {
+    margin-left: unset;
+    width: 65%;
+  }
+
+  .sellersDetailsAddress {
+    font-size: 12px;
+  }
+
+  .sellerAddressDiv svg {
+    display: none;
+  }
+
+  .sellerAddressDiv {
+    margin-top: 5px;
+  }
+
+  .sellerName {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .sellersChatBtn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sellersinfo {
+    min-height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

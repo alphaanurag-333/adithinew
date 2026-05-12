@@ -1,0 +1,166 @@
+.rides-details-page {
+  padding-bottom: 24px;
+}
+
+.rides-details-page .rides-hero-media {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.14);
+}
+
+.rides-details-page .rides-main-image {
+  height: clamp(260px, 44vw, 430px);
+  object-fit:fill;
+  object-position: center;
+  display: block;
+}
+
+.rides-details-page .rides-thumb-strip {
+  padding-bottom: 4px;
+}
+
+.rides-details-page .rides-thumb-btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  flex: 0 0 auto;
+  line-height: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rides-details-page .rides-thumb-btn:focus-visible {
+  outline: 2px solid #20b8b5;
+  outline-offset: 2px;
+}
+
+.rides-details-page .rides-thumb {
+  width: 120px;
+  height: 82px;
+  object-fit: fill;
+  border-radius: 10px;
+  display: block;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rides-details-page .rides-thumb-btn:hover .rides-thumb {
+  transform: translateY(-1px);
+}
+
+.rides-details-page .rides-thumb-btn.active .rides-thumb {
+  border-color: #188892;
+  box-shadow: 0 10px 24px rgba(24, 136, 146, 0.22);
+}
+
+.rides-details-page .rides-wishlist-btn {
+  appearance: none;
+  border: none;
+}
+
+.rides-details-page .rides-primary-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(0.2);
+}
+
+.rides-details-page .rides-title-row {
+  gap: 16px;
+  border-bottom: 1px solid #e6edf5;
+  padding-bottom: 14px;
+}
+
+.rides-details-page .rides-rating-row {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rides-details-page .rides-location-row {
+  font-size: 0.95rem;
+}
+
+.rides-details-page .rides-price-box {
+  background: #fff;
+  border: 1px solid #deebf8;
+  border-radius: 12px;
+  padding: 10px 14px;
+  min-width: 220px;
+}
+
+.rides-details-page .rides-soft-card {
+  border: 1px solid #e7eef7;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.rides-details-page .rides-description-text {
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.rides-details-page .rides-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+  margin-top: 8px;
+}
+
+.rides-details-page .rides-spec-grid p {
+  margin: 0;
+  padding: 9px 10px;
+  border: 1px solid #e7eef7;
+  border-radius: 10px;
+  background: #fafcff;
+  color: #445569;
+}
+
+.rides-details-page .rides-price-inline {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.rides-details-page .rides-booking-card {
+  border-color: #dfeaf6;
+}
+
+.rides-details-page .rides-booking-title {
+  border-bottom: 1px solid #e8eff7;
+  padding-bottom: 10px;
+}
+
+.rides-details-page .rides-primary-btn {
+  min-height: 44px;
+  border-radius: 10px;
+}
+
+.rides-details-page .rides-whatsapp-btn {
+  min-height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .rides-details-page .rides-title-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .rides-details-page .rides-price-box {
+    min-width: 100%;
+    width: 100%;
+    text-align: left !important;
+  }
+
+  .rides-details-page .rides-spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rides-details-page .rides-thumb {
+    width: 104px;
+    height: 74px;
+  }
+}

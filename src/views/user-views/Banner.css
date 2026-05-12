@@ -1,0 +1,207 @@
+/* Carousel Wrapper */
+.bannerSectionFull {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  /* background: #ffffff; */
+  line-height: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  overflow-x: clip;
+  box-sizing: border-box;
+}
+
+.bannerCarousel {
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  max-width: 100%;
+}
+
+.bannerCarousel .carousel-inner {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.bannerCarousel .carousel-item {
+  width: 100%;
+}
+
+/* Banner wrapper */
+.bannerWrapper {
+  width: 100%;
+  max-width: 100%;
+  height: 430px;
+  max-height: min(430px, 52vh);
+  overflow: hidden;
+  background: #f1f5f9;
+  box-sizing: border-box;
+}
+
+/* Image */
+.bannerImage {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Heading Gradient */
+.themeHeader h2 span {
+  color: var(--primary);
+}
+
+/* Tablet: predictable height without tight mobile caps */
+@media (max-width: 991.98px) {
+  .bannerSectionFull {
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+
+  .bannerWrapper {
+    height: clamp(220px, 38vw, min(46dvh, 400px));
+    max-height: none;
+  }
+}
+
+/*
+  Mobile / narrow: fade carousel + aspect-ratio + low max-height caused
+  bad crops (especially landscape). Use slide on small viewports (JS)
+  and here: flex box + contain so full artwork stays visible.
+*/
+@media (max-width: 767.98px) {
+  .bannerSectionFull {
+    margin-top: 6px;
+    margin-bottom: 12px;
+  }
+
+  .bannerWrapper {
+    /* 56.25vw == 9/16 of viewport width → true 16:9 slot for full-bleed width */
+    height: clamp(176px, 56.25vw, min(72dvh, 440px));
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #e8edf3 100%);
+  }
+
+  .bannerCarousel .bannerImage,
+  .bannerCarousel img.bannerImage {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .bannerCarousel .carousel-control-prev,
+  .bannerCarousel .carousel-control-next {
+    width: 34px;
+    height: 34px;
+  }
+
+  .bannerCarousel .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}
+
+/* Extra-narrow: slightly shorter slot so controls + Homedash breathe */
+@media (max-width: 380px) {
+  .bannerWrapper {
+    height: clamp(160px, 54vw, min(68dvh, 400px));
+  }
+}
+
+/* Edge-to-edge on small screens (fluid container) */
+@media (max-width: 767.98px) {
+  .bannerCarousel img.bannerImage,
+  .bannerCarousel img {
+    border-radius: 0;
+  }
+}
+
+.bannerCarousel .carousel-control-prev,
+.bannerCarousel .carousel-control-next {
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(30, 49, 82, 0.45);
+  opacity: 0.9;
+}
+
+.bannerCarousel .carousel-control-prev:hover,
+.bannerCarousel .carousel-control-next:hover {
+  background: rgba(30, 49, 82, 0.65);
+  opacity: 1;
+}
+
+.bannerCarousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  border: 1px solid rgba(23, 59, 95, 0.2);
+}
+
+.bannerCarousel .carousel-indicators .active {
+  background: var(--secondary);
+  border-color: var(--primary);
+}
+
+/*
+  Desktop / large: wide promo art should edge-to-edge in the slot (no side
+  gutters from object-fit: contain). Use cover + slightly taller slot so
+  less vertical crop than old fixed 430px.
+*/
+@media (min-width: 992px) {
+  .bannerWrapper {
+    position: relative;
+    height: clamp(500px, 40vw, 680px);
+    min-height: 358px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #e8ecf2;
+    border-radius: 10px;
+  }
+
+  .bannerCarousel .bannerImage,
+  .bannerCarousel img.bannerImage {
+    position: static;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .bannerWrapper {
+    height: clamp(400px, 24vw, min(58dvh, 760px));
+  }
+}
+
+/* Rounded corners only on tablet — desktop banner reads as full strip */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bannerCarousel img {
+    border-radius: 10px;
+  }
+}
