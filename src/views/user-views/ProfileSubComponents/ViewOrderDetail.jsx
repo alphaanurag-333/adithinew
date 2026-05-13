@@ -68,7 +68,7 @@ function ViewOrderDetail() {
           </table>
         </div>
       </div>
-      <div className="historyOrderInfo">
+      {/* <div className="historyOrderInfo">
         <div className="row">
           <div className="col-md-7 col-12 mb-2">
             <div className="orderDescriptionDiv">
@@ -82,10 +82,10 @@ function ViewOrderDetail() {
                   <span className="historyOrderId">
                     Order ID - <p>OID52466246325</p>
                   </span>
-                  {/* <h6>|</h6>
+                  <h6>|</h6>
                   <span className="historyOrderSellerInfo">
                     Sold by : <p>Seller</p>
-                  </span> */}
+                  </span>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@ function ViewOrderDetail() {
             <button onClick={()=>Navigate("/ridesdetails/1")}>Explore Vehicle</button>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

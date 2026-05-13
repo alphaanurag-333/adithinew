@@ -25,16 +25,10 @@ function OrderHistory({ setActiveTab }) {
         setLoading(true)
         const response = await API.get('/customer/enquiries', {
           headers: {
-            'X-Access-Token': userToken,
-            Accept: 'application/json',
+            'Authorization': `Bearer ${userToken}`,
+            'Accept': 'application/json',
           },
         })
-        // const response = await API.get('/customer/enquiries', {
-        //   headers: {
-        //     Authorization: `Bearer ${userToken}`,
-        //     Accept: 'application/json',
-        //   },
-        // })
 
         setEnquiries(response?.data?.data)
 

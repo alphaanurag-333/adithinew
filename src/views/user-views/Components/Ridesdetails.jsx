@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { GoLocation } from 'react-icons/go'
 import { BsFillHeartFill } from 'react-icons/bs'
 import { Spinner } from 'react-bootstrap'
+import Swal from 'sweetalert2'
 import API from '../../../api'
 import './ridesdetails.css'
 
@@ -88,6 +89,10 @@ function Ridesdetails() {
       : ''
 
   const goToConfirm = () => {
+    if (!travelDate || !travelTime) {
+      Swal.fire('Please fill all the fields', 'Please fill all the fields', 'warning')
+      return
+    }
     localStorage.setItem('type', 'vehicle')
     localStorage.setItem(
       'checkoutVehiclePreview',
@@ -110,6 +115,7 @@ function Ridesdetails() {
         vehicle_id: Number(id),
         travel_date: travelDate || null,
         travel_time: travelTime || null,
+        pickup_date: travelDate || null,
       }),
     )
     navigate('/check-out')
@@ -259,7 +265,7 @@ function Ridesdetails() {
 
             <div className="themeInput mb-2">
               <label className="form-label small mb-1" htmlFor="ride-pickup-date">
-                Date <span className="text-muted fw-normal">(optional)</span>
+                Date <span className="text-muted fw-normal">*</span>
               </label>
               <input
                 id="ride-pickup-date"
@@ -268,11 +274,12 @@ function Ridesdetails() {
                 min={today}
                 value={travelDate}
                 onChange={(e) => setTravelDate(e.target.value)}
+                required
               />
             </div>
             <div className="themeInput mb-3">
               <label className="form-label small mb-1" htmlFor="ride-pickup-time">
-                Time <span className="text-muted fw-normal">(optional)</span>
+                Time <span className="text-muted fw-normal">*</span>
               </label>
               <input
                 id="ride-pickup-time"
@@ -280,6 +287,7 @@ function Ridesdetails() {
                 className="form-control"
                 value={travelTime}
                 onChange={(e) => setTravelTime(e.target.value)}
+                required
               />
             </div>
 

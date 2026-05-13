@@ -31,8 +31,8 @@ function Food() {
   useEffect(() => {
     const q = searchParams.get('q')?.trim()
     const category = searchParams.get('category')?.trim()
-    if (q) setSearchTerm(q)
-    else if (category) setSearchTerm(category)
+    // if (q) setSearchTerm(q)
+    // else if (category) setSearchTerm(category)
   }, [searchParams])
 
   // ✅ FETCH API

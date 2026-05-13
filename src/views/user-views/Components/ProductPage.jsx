@@ -57,10 +57,10 @@ function ProductPage() {
   const [loading, setLoading] = useState(false)
   const [gallerySlideById, setGallerySlideById] = useState({})
 
-  useEffect(() => {
-    const q = searchParams.get('q')?.trim()
-    if (q) setSearchTerm(q)
-  }, [searchParams])   
+  // useEffect(() => {
+  //   const q = searchParams.get('q')?.trim()
+  //   if (q) setSearchTerm(q)
+  // }, [searchParams])   
 
   useEffect(() => {
     const fetchHomestay = async () => {

@@ -332,6 +332,7 @@ const CartList = () => {
                     to="/check-out"
 
                     onClick={() => {
+                      localStorage.setItem('type', 'food')
 
                       localStorage.setItem(
                         "checkoutFoodPreview",

@@ -43,7 +43,7 @@ function formatDateRange(start, end) {
 }
 
 function CheckoutPage() {
-  const { userToken } = useSelector((state) => state.auth)
+  const { userToken , user  } = useSelector((state) => state.auth)
   const navigate = useNavigate()
   const formRef = useRef(null)
   const [showConfirm, setShowConfirm] = useState(false)
@@ -124,16 +124,17 @@ function CheckoutPage() {
     try {
       if (type === 'vehicle') {
         const ctx = readJsonStorage('checkoutVehicleContext')
-        if (!ctx?.vehicle_id) {
+        const vid = Number(ctx?.vehicle_id)
+        if (!Number.isFinite(vid) || vid <= 0) {
           Swal.fire(
             'Details missing',
-            'Vehicle checkout ke liye pehle kisi vehicle page se “Book now” use karein.',
+            'Something went wrong in vehicle checkout',
             'warning',
           )
           return
         }
         const payload = {
-         
+          user_id: user?.id,
           customer_name: name,
           customer_phone: phone,
           customer_email: email || undefined,
@@ -161,7 +162,7 @@ function CheckoutPage() {
         if (!ctx?.homestay_id || !ctx.check_in_date || !ctx.check_out_date || !ctx.room_name) {
           Swal.fire(
             'Details missing',
-            'Homestay checkout ke liye property page par room, dates aur guests set karke “Reserve” karein.',
+            'Something went wrong in homestay checkout',
             'warning',
           )
           return
@@ -169,6 +170,7 @@ function CheckoutPage() {
         const guests = Number(ctx.adults || 1) + Number(ctx.children || 0)
         const payload = {
           customer_name: name,
+          user_id: user?.id,
           customer_phone: phone,
           customer_email: email || undefined,
           check_in_date: ctx.check_in_date,
@@ -232,7 +234,7 @@ function CheckoutPage() {
       }
     
       const res = await API.post(
-        `/food/${1}/book-enquiry`,
+        `/food/${checkoutData?.vendor_id}/book-enquiry`,
         payload,
         {
           headers: {
